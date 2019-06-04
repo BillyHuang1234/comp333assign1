@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="QiuWei Huang">
+<meta name="keywords" content="chat-facility" />
+<title>Chat Facility</title>
+<link rel="stylesheet" type="text/css" href="css/chatfacility.css">
+<script src="script/Process.js"></script>
+</head>
+
+<body onload="show()">
+<div class="div5">
+
+<div id="right">
+<button id="register_button" class="button1" type="button" onclick="register_button()"><img class="contentimg" src="image/register.png" alt="No image">Register</button>
+</div>
+
+<div id="left">
+<button id="login_button" class="button1" type="button" onclick="on_off()"><img class="contentimg" src="image/login.png" alt="No image">Login</button>
+<button id="logout_button" class="button8" type="button" onclick="logout()"><img class="contentimg" src="image/login.png" alt="No image">LogOut</button>
+</div>
+
+</div>
+
+<div class="div6">
+
+<div class="left" id="status_div">
+
+<h1>Online</h1>
+<table>
+<tbody id="online_status">
+</tbody>
+</table>
+
+<h1>Offline</h1>
+<table>
+<tbody id="offline_status">
+</tbody>
+</table>
+
+</div>
+
+<div class="right">
+
+<div id="login" class="div3">
+
+<form name="formL">
+<span class="style1">Username:</span> <input class="style1" type="text" id="user" name="username" onblur="checkUserName(this)"/><br>
+<span class="style1">Password:</span> <input class="style2" type="password" id="pass" name="password" onblur="checkUserPass(this,user)"/><br>
+<button class="button2" type="button" value="Submit" onclick="checkLogin()">OK</button>
+<button class="button2" type="reset">Clear</button>
+</form>
+
+</div>
+
+<div id="register" class="div4">
+
+<form>
+<span class="style1">First Name:</span> <input id="register_first" class="style3" type="text" name="firstname"/><br>
+<span class="style1">Last Name:</span> <input id="register_last" class="style4" type="text" name="lastname"/><br>
+<span class="style1">User Name:</span> <input id="register_user" class="style5" type="text" name="newusername" onblur="autocheckpass()"/><br>
+<span class="style1">Password:</span> <input id="register_pass" class="style6" type="password" name="newpassword"/><br>
+<span class="style1">Email:</span> <input id="register_email" class="style7" type="email" name="email"/><br>
+<button class="button3" type="button" value="Submit" onclick="goRegister()">OK</button>
+<button class="button3" type="reset">Clear</button>
+</form>
+
+</div>
+
+<div id="com" class="area">
+
+</div>
+
+<div id="com2" class="area2">
+
+</div>
+
+</div>
+
+</div>
+
+<div id="input_board" class="div2">
+
+<form id="content_form">
+<span class="style3">Find particular user information:</span><input id="particular_user" type="text"/><button type="button" onclick="particular()">Find</button>
+<button type="button" onclick="back()">Back</button><br>
+<span class="style2">Enter text:</span><br>
+<textarea rows="20" cols="130" id="area" form="content_form" placeholder="Enter text in here"></textarea><br>
+<button class="button4" type="button" onclick="submitContent()">Submit</button>
+</form>
+
+</div>
+
+</body>
+
+</html>
